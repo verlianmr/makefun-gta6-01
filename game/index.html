@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Costa Brisa — Neon Shores</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<canvas id="game" aria-label="Costa Brisa — Neon Shores: an open-world crime game. Drive and walk with WASD or the arrow keys, press E to enter cars and talk, aim with the mouse and click to fire."></canvas>
+<p id="status" role="status" aria-live="polite"></p>
+
+<section id="title-screen" class="overlay">
+  <div class="panel title-panel">
+    <p class="kicker">PUERTO BRISA PRESENTS</p>
+    <h1>COSTA BRISA</h1>
+    <p class="tagline">NEON SHORES</p>
+    <p class="story">Rio Delgado came home to the coast with nothing but a duffel bag and a
+      phone number. The number belongs to <strong>Mara Voss</strong>, who fixes problems for
+      everyone on the Brisa docks — and the Costa Brisa PD fixes hers right back. Run her jobs,
+      borrow what you need, and stay out of the cage.</p>
+    <div class="buttons">
+      <button id="btn-new" type="button">New game</button>
+      <button id="btn-continue" type="button">Continue</button>
+    </div>
+    <div class="controls">
+      <span><b>W A S D</b> move / drive</span>
+      <span><b>E</b> enter car · talk · take job</span>
+      <span><b>Mouse</b> aim · <b>click</b> fire</span>
+      <span><b>Shift</b> run / handbrake</span>
+      <span><b>P</b> pause</span>
+      <span><b>M</b> sound on/off</span>
+    </div>
+  </div>
+</section>
+
+<section id="pause-menu" class="overlay hidden">
+  <div class="panel">
+    <h2>Paused</h2>
+    <p class="story">The city waits. Your progress is saved in this browser.</p>
+    <div class="buttons">
+      <button id="btn-resume" type="button">Back to the streets</button>
+      <button id="btn-restart" type="button">Restart story</button>
+    </div>
+  </div>
+</section>
+
+<section id="end-screen" class="overlay hidden">
+  <div class="panel">
+    <h2 id="end-title">BUSTED</h2>
+    <p class="story" id="end-text">The CBPD got their collar.</p>
+    <div class="buttons">
+      <button id="btn-again" type="button">Back out there</button>
+    </div>
+  </div>
+</section>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
